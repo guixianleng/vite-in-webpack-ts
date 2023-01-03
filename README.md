@@ -1,6 +1,6 @@
-# 前言
+# Vite in webpack
 
-由于项目设计到的功能比较多，考虑到vite搭建没有跟上插件的兼容性，Vite 作为webpack（vue-cli）开发环境运行工具， Webpack 还是在生产环境上进行构建。
+由于项目功能比较多，现有的vite插件不具备兼容所有的vue3项目，故将Vite 作为webpack（vue-cli）开发环境运行构建， 为稳定生产环境上项目运行，依然使用webpack进行打包构建。
 这里使用 `pnpm` 进行 `vue-cli` 项目的搭建，请先全局安装 `pnpm`
 
 # 基础项目搭建 Vite + Webpack + Ts
@@ -220,39 +220,6 @@ WebStorm不显式导入的话会没有类型提示，想要的话还是需要 im
 
 ```
 
-# ⚙ git hooks
-
-保证代码格式的健壮性和一致性是很重要的，我们这里在提交代码时增加一道 git hooks 检查：
-
-`yarn add lint-staged`
-
-package.json:
-
-```json
-{
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": ["vue-cli-service lint"]
-  }
-}
-```
-
-除了仅检查，我们还可以增加自动`prettier`的格式化，强制保持风格统一：
-
-```json
-{
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "prettier --write --config .prettierrc", // 用默认配置的话可以不指定--config。
-      "vue-cli-service lint",
-      "git add" // prettier 的话有可能会修改原文件不要忘记在git add 一下。
-    ]
-  }
-}
-```
-
 # 📦 其他有用的基础配置
 
 ## babel 的一些有用的配置
@@ -293,4 +260,33 @@ vue.config.js:
       return options;
     });
   },
+```
+
+## Install and use
+
+- Get the project code
+
+```bash
+git clone https://github.com/guixianleng/vite-in-webpack-ts.git
+```
+
+- Installation dependencies
+
+```bash
+cd vite-in-webpack-ts
+
+pnpm install
+
+```
+
+- run
+
+```bash
+pnpm serve or pnpm dev
+```
+
+- build
+
+```bash
+pnpm build
 ```
