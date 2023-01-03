@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{js,jsx,vue,ts,tsx}': ['vue-cli-service lint', 'git add'],
+  '*.{js,jsx,vue,ts,tsx}': ['pnpm lint', 'prettier --write'],
 };

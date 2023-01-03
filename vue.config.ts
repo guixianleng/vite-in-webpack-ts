@@ -1,18 +1,25 @@
-const { defineConfig } = require("@vue/cli-service");
+const { defineConfig } = require('@vue/cli-service');
+const path = require('path');
+const Components = require('unplugin-vue-components/webpack');
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  lintOnSave: process.env.NODE_ENV === 'development',
   configureWebpack: {
     resolve: {
       alias: {
-        "@": "/src",
-        "/#/": "/types/"
+        '@': resolve('src'),
+        '/#/': resolve('types'),
       },
     },
     plugins: [
-      require("unplugin-auto-import/webpack")({
-        imports: ["vue", "vue-router"],
-        dts: false,
+      Components({
+        types: [],
+        dts: true,
       }),
     ],
   },

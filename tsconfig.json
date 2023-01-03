@@ -14,11 +14,12 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
+      "node",
       "webpack-env"
     ],
     "paths": {
-      "@/*": ["src/*"],
-      "/#/*": ["types/*"]
+      "@/*": ["./src/*"],
+      "/#/*": ["./types/*"]
     },
     "lib": [
       "esnext",
@@ -34,6 +35,7 @@
     "src/**/*.vue",
     "types/**/*.d.ts",
     "types/**/*.ts",
+    "components.d.ts"
   ],
   "exclude": ["node_modules",  "dist", "**/*.js"]
 }

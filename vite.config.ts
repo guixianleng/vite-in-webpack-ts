@@ -1,26 +1,37 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import htmlTemplate from "vite-plugin-html-template";
-import EnvironmentPlugin from "vite-plugin-environment";
-import AutoImport from "unplugin-auto-import/vite";
+import { defineConfig } from 'vite';
+import path from 'path';
+import vue from '@vitejs/plugin-vue';
+import htmlTemplate from 'vite-plugin-html-template';
+import EnvironmentPlugin from 'vite-plugin-environment';
+import eslintPlugin from 'vite-plugin-eslint';
+import Components from 'unplugin-vue-components/vite';
 
-export default defineConfig({
-  resolve: {
-    alias: {
-      "@": "/src",
-      "/#/": "/types/"
-    },
-  },
-  plugins: [
-    vue(),
-    htmlTemplate(),
-    EnvironmentPlugin("all", { prefix: "VUE_APP_" }),
-    AutoImport({
-      imports: ["vue", "vue-router"],
-      eslintrc: {
-        enabled: true,
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
+export default defineConfig(({ mode }) => {
+  return {
+    resolve: {
+      alias: {
+        '@': resolve('src'),
+        '/#/': resolve('types'),
       },
-      dts: "./types/auto-imports.d.ts",
-    }),
-  ],
+    },
+    plugins: [
+      vue(),
+      htmlTemplate(),
+      EnvironmentPlugin('all', { prefix: 'VUE_APP_' }),
+      Components({
+        types: [],
+        dts: true,
+      }),
+      mode === 'development' &&
+        eslintPlugin({
+          include: ['src/**/*.js', 'src/**/*.jsx', 'src/**/*.vue', 'src/**/*.tsx', 'src/**/*.ts'],
+          exclude: ['./node_modules/**'],
+          cache: false,
+        }),
+    ],
+  };
 });
