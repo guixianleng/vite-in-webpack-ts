@@ -2,5 +2,4 @@ node_modules
 dist
 src/*/*.d.ts
 src/iconfont/**
-auto-imports.d.ts
 components.d.ts
