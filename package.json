@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "crf-ui": "^0.0.78",
+    "element-plus": "^2.2.29",
     "pinia": "^2.0.28",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
@@ -46,8 +48,8 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.6.0",
     "typescript": "~4.5.5",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.3",

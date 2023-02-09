@@ -60,27 +60,15 @@
       </li>
     </ul>
     <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a>
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a>
-      </li>
-      <li>
-        <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+    <el-row class="mb-4">
+      <el-button size="small">Default</el-button>
+      <el-button type="primary" size="small">Primary</el-button>
+      <el-button type="success" size="small">Success</el-button>
+      <el-button type="info" size="small">Info</el-button>
+      <el-button type="warning" size="small">Warning</el-button>
+      <el-button type="danger" size="small">Danger</el-button>
+    </el-row>
+    <el-link href="https://element-plus.org" type="primary" target="_blank">default</el-link>
   </div>
 </template>
 
