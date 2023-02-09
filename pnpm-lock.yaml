@@ -17,7 +17,7 @@ specifiers:
   '@vue/cli-service': ~5.0.0
   '@vue/eslint-config-typescript': ^9.1.0
   core-js: ^3.8.3
-  crf-ui: ^0.0.78
+  crf-ui: ^0.0.79
   element-plus: ^2.2.29
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
@@ -42,7 +42,7 @@ specifiers:
 
 dependencies:
   core-js: 3.27.1
-  crf-ui: 0.0.78
+  crf-ui: 0.0.79
   element-plus: 2.2.29_vue@3.2.45
   pinia: 2.0.28_oankqy72ltdeevri3bqxeckw3m
   vue: 3.2.45
@@ -3999,8 +3999,8 @@ packages:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
 
-  /crf-ui/0.0.78:
-    resolution: {integrity: sha512-+NBPtU2Z4QtDq32S9xSO/8yRE5ppz30fFpsN7PZJCeCybmaABf21Th0YOjVCHAKlBTnnNhMmgmOmuSUruPrCkA==}
+  /crf-ui/0.0.79:
+    resolution: {integrity: sha512-uwtzXxVDN8PeS6tPD54/5ZBrYiLUwg/ruDpn/IFA6hOfonrzWbuvENvozzs8z7420lr8zHV/fBM4XMw3Lkd1+Q==}
     dev: false
 
   /cross-spawn/5.1.0:
