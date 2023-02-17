@@ -6,6 +6,7 @@ import EnvironmentPlugin from 'vite-plugin-environment';
 import eslintPlugin from 'vite-plugin-eslint';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -16,6 +17,7 @@ export default defineConfig(({ mode }) => {
   // vite插件
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     vue(),
+    vueJsx(),
     htmlTemplate(),
     EnvironmentPlugin('all', { prefix: 'VUE_APP_' }),
     Components({
@@ -42,5 +44,16 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [...vitePlugins],
+    server: {
+      open: true,
+      host: true,
+      proxy: {
+        '/basic-api': {
+          target: 'xxx', // proxy address
+          changeOrigin: true,
+          rewrite: (path: string) => path.replace(/^\/basic-api/, ''),
+        },
+      },
+    },
   };
 });

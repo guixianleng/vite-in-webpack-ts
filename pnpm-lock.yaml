@@ -10,6 +10,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.4.0
   '@typescript-eslint/parser': ^5.4.0
   '@vitejs/plugin-vue': ^4.0.0
+  '@vitejs/plugin-vue-jsx': ^3.0.0
   '@vue/cli-plugin-babel': ~5.0.0
   '@vue/cli-plugin-eslint': ~5.0.0
   '@vue/cli-plugin-router': ~5.0.0
@@ -58,6 +59,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.48.0_yaruxvsgav6mqpbg4olycr5q4e
   '@typescript-eslint/parser': 5.48.0_sgaiclxgc5mltnpgmg7py4v6ca
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.3+vue@3.2.45
+  '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.3+vue@3.2.45
   '@vue/cli-plugin-babel': 5.0.8_ztq44ko2lhov3gygcx3m3fbrkm
   '@vue/cli-plugin-eslint': 5.0.8_yvnkslq6l73c7sesu7e5hzum2a
   '@vue/cli-plugin-router': 5.0.8_@vue+cli-service@5.0.8
@@ -197,8 +199,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /@babel/helper-create-class-features-plugin/7.20.7_@babel+core@7.20.7:
-    resolution: {integrity: sha512-LtoWbDXOaidEf50hmdDqn9g8VEzsorMexoWMQdQODbvmqYmaF23pBP5VNPAGIFHsFQCIeKokDiz3CH5Y2jlY6w==}
+  /@babel/helper-create-class-features-plugin/7.20.12_@babel+core@7.20.7:
+    resolution: {integrity: sha512-9OunRkbT0JQcednL0UFvbfXpAsUXiGjUk0a7sN8fUXX7Mue79cUSMjHGDRRi/Vz9vYlpIhLV5fMD5dKoMhhsNQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -210,6 +212,7 @@ packages:
       '@babel/helper-member-expression-to-functions': 7.20.7
       '@babel/helper-optimise-call-expression': 7.18.6
       '@babel/helper-replace-supers': 7.20.7
+      '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/helper-split-export-declaration': 7.18.6
     transitivePeerDependencies:
       - supports-color
@@ -457,7 +460,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.20.7
-      '@babel/helper-create-class-features-plugin': 7.20.7_@babel+core@7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
       '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
@@ -470,7 +473,7 @@ packages:
       '@babel/core': ^7.12.0
     dependencies:
       '@babel/core': 7.20.7
-      '@babel/helper-create-class-features-plugin': 7.20.7_@babel+core@7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-class-static-block': 7.14.5_@babel+core@7.20.7
     transitivePeerDependencies:
@@ -484,7 +487,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.20.7
-      '@babel/helper-create-class-features-plugin': 7.20.7_@babel+core@7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/helper-replace-supers': 7.20.7
       '@babel/helper-split-export-declaration': 7.18.6
@@ -624,7 +627,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.20.7
-      '@babel/helper-create-class-features-plugin': 7.20.7_@babel+core@7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
       '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
@@ -638,7 +641,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.7
       '@babel/helper-annotate-as-pure': 7.18.6
-      '@babel/helper-create-class-features-plugin': 7.20.7_@babel+core@7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.20.7
     transitivePeerDependencies:
@@ -823,6 +826,16 @@ packages:
 
   /@babel/plugin-syntax-top-level-await/7.14.5_@babel+core@7.20.7:
     resolution: {integrity: sha512-hx++upLv5U1rgYfwe1xBQUhRmU41NEvpUvrp8jkrSCdvGSnM5/qdRMtylJ6PG5OFkBaHkbTAKTnd3/YyESRHFw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.20.7
+      '@babel/helper-plugin-utils': 7.20.2
+    dev: true
+
+  /@babel/plugin-syntax-typescript/7.20.0_@babel+core@7.20.7:
+    resolution: {integrity: sha512-rd9TkG+u1CExzS4SM1BlMEhMXwFLKVjOAFFCDx9PbX5ycJWDoWMcwdJH9RhkPu1dOgn5TrxLot/Gx6lWFuAUNQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1186,6 +1199,20 @@ packages:
     dependencies:
       '@babel/core': 7.20.7
       '@babel/helper-plugin-utils': 7.20.2
+    dev: true
+
+  /@babel/plugin-transform-typescript/7.20.13_@babel+core@7.20.7:
+    resolution: {integrity: sha512-O7I/THxarGcDZxkgWKMUrk7NK1/WbHAg3Xx86gqS6x9MTrNL6AwIluuZ96ms4xeDe6AVx6rjHbWHP7x26EPQBA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.20.7
+      '@babel/helper-create-class-features-plugin': 7.20.12_@babel+core@7.20.7
+      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/plugin-syntax-typescript': 7.20.0_@babel+core@7.20.7
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/plugin-transform-unicode-escapes/7.18.10_@babel+core@7.20.7:
@@ -2243,6 +2270,22 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.48.0
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@vitejs/plugin-vue-jsx/3.0.0_vite@4.0.3+vue@3.2.45:
+    resolution: {integrity: sha512-vurkuzgac5SYuxd2HUZqAFAWGTF10diKBwJNbCvnWijNZfXd+7jMtqjPFbGt7idOJUn584fP1Ar9j/GN2jQ3Ew==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^4.0.0
+      vue: ^3.0.0
+    dependencies:
+      '@babel/core': 7.20.7
+      '@babel/plugin-transform-typescript': 7.20.13_@babel+core@7.20.7
+      '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.20.7
+      vite: 4.0.3_ovmyjmuuyckt3r3gpaexj2onji
+      vue: 3.2.45
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@vitejs/plugin-vue/4.0.0_vite@4.0.3+vue@3.2.45:

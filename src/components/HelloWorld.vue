@@ -60,14 +60,14 @@
       </li>
     </ul>
     <h3>Ecosystem</h3>
-    <el-row class="mb-4">
+    <div style="margin: 20px auto; width: 100%; text-align: center">
       <el-button size="small">Default</el-button>
       <el-button type="primary" size="small">Primary</el-button>
       <el-button type="success" size="small">Success</el-button>
       <el-button type="info" size="small">Info</el-button>
       <el-button type="warning" size="small">Warning</el-button>
       <el-button type="danger" size="small">Danger</el-button>
-    </el-row>
+    </div>
     <el-link href="https://element-plus.org" type="primary" target="_blank">default</el-link>
   </div>
 </template>
